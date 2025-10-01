@@ -93,3 +93,8 @@ See `.env.example` for all options.
 
 Uses last 400 movies from Wikipedia Movie Plots dataset. Covers 2008-2017 releases with substantial plot descriptions.
 
+**Download the dataset:**
+- Source: [Wikipedia Movie Plots on Kaggle](https://www.kaggle.com/datasets/jrobischon/wikipedia-movie-plots)
+- File: `wiki_movie_plots_deduped.csv`
+- Place in project root directory after download
+
