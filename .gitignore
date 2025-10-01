@@ -1,0 +1,46 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# Vector Database Cache
+vector_db/
+
+# Test files
+test_*.py
+*_test.py
+test_output.txt
+
+# Logs
+*.log
+api_log.txt
+
+# Temporary files
+*.tmp
+*.temp
