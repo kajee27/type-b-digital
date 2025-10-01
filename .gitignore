@@ -1,6 +1,9 @@
 # Environment variables
 .env
 
+# Dataset (too large for GitHub)
+wiki_movie_plots_deduped.csv
+
 # Python
 __pycache__/
 *.py[cod]
