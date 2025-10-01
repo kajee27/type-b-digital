@@ -39,7 +39,7 @@ class RAGSystem:
             max_tokens=int(os.getenv("LLM_MAX_TOKENS", "1000")),
             reasoning_effort="default",
             reasoning_format="parsed"
-        ).with_structured_output(MovieResponse)
+        ).with_structured_output(MovieResponse, method="json_mode")
         
         self.vector_store = None
         self.bm25 = None
@@ -152,8 +152,10 @@ class RAGSystem:
     def build_chain(self):
         # Create the LangChain pipeline that connects prompt to LLM
         prompt = ChatPromptTemplate.from_template(
-            "Based on the movie plot contexts below, answer the question.\n\n"
-            "CONTEXTS:\n{context}\n\nQUESTION:\n{question}"
+            "You are a helpful movie assistant. Answer the user's question based on the provided movie plot contexts. "
+            "Respond in JSON format with these exact fields: answer, contexts (as a list), and reasoning.\n\n"
+            "CONTEXTS:\n{context}\n\n"
+            "QUESTION:\n{question}"
         )
         self.chain = prompt | self.llm
         print("RAG chain built.")
